@@ -1,8 +1,0 @@
-# -*- coding: utf-8 -*-
-#!/bin/python
-import sys
-import json
-import codecs
-from bs4 import BeautifulSoup
-import re
-

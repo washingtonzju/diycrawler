@@ -1,6 +1,0 @@
-import lxml
-from lxml2 import etree
-
-some_xml = "<root>data</root>"
-root = etree.fromstring(some_xml)
-print root.tag
