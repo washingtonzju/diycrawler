@@ -8,5 +8,5 @@ import urllib2
 from bs4 import BeautifulSoup
 import re
 
-page = urllib2.urlopen("http://money.163.com/licai/")
+page = urllib2.urlopen("https://www.facebook.com")
 print unicode(page.read().decode("gbk"))

@@ -262,28 +262,9 @@ class TTZNLCrawler:
 if __name__ == "__main__":
     
     if len(sys.argv) < 2:
-        print "Usage crawler.py crawler_source.json"
+        print "Usage crawler.py categorys.json"
         
-    """
-    crawler = NEBBSCrawler("http://money.163.com/licai/", 2)
-    crawler2 = NEArticleCrawler("http://money.163.com/special/ctgc/", 2)
-    print crawler.parsing()
-    crawler2.parsing()
-    crawler3 = ZNLCrawler("http://www.znlba.com", 6)
-    crawler3.parsing()
-    crawler4 = ZNLListCrawler("http://www.znlba.com/v3", 6)
-    crawler4.parsing()
-    crawler5 = NEListCrawler("http://money.163.com/special/002534NV/auto_house.html", 4)
-    crawler5.parsing()
-    crawler6 = XCFCrawler("http://www.xiachufang.com/explore/menu/collect/", 4)
-    crawler6.parsing()
-    crawler7 = DXCrawler("http://infect.dxy.cn/tag/news", 4)
-    crawler7.parsing()
-    crawler8 = XinHuaCrawler("http://search.news.cn/mb/xinhuanet/search/?styleurl=http://www.xinhuanet.com/employment/static/style/zhichang.css&amp;nodetype=3&amp;nodeid=11629", 1)
-    crawler8.parsing()
-    crawler9 = Apple4Crawler("http://www.apple4.cn/category/happy-study/study-resouces/", 3)
-    crawler9.parsing()
-    """
+    
     crawlers = []
     
     crawlers.append(NEBBSCrawler("http://money.163.com/licai/", 2))
@@ -325,11 +306,12 @@ if __name__ == "__main__":
     crawlers.append(Apple4Crawler("http://www.apple4.cn/category/happy-study/page/8/", 3))
     crawlers.append(Apple4Crawler("http://www.apple4.cn/category/happy-study/page/9/", 3))
     crawlers.append(Apple4Crawler("http://www.apple4.cn/category/happy-study/page/10/", 3))    
-    crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/", 6))
+    crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/", 6))    
     crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/list_1_2.html", 6))
-    #crawlers[0].parsing()
-    #crawlers[1].parsing()
-    
+    crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/list_1_3.html", 6))
+    crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/list_1_4.html", 6))
+    crawlers.append(TTZNLCrawler("http://www.ttznl.cn/zhengnenliangxinwen/list_1_5.html", 6))
+                    
     categorys = {}
     for crawler in crawlers:
         articles = crawler.parsing()
